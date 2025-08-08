@@ -3,83 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrique Bercian - Developer & Entrepreneur</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Brandley</title>
+    <meta name="description" content="The premier platform where brands discover authentic creators and influencers monetize their passion.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    
+    <style>
+        :root {
+            --color-blue-400: #2F4059;
+            --color-blue-300: #51627B;
+            --color-blue-50: #FCFCFF;
+            --color-navy-500: #1a365d;
+            --color-navy-600: #0f2027;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .font-display {
+            font-family: 'DM Sans', sans-serif;
+        }
+        
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .bg-blue-50 {
+            background-color: var(--color-blue-50);
+        }
+        
+        .text-blue-400 {
+            color: var(--color-blue-400);
+        }
+        
+        .text-blue-300 {
+            color: var(--color-blue-300);
+        }
+        
+        .text-blue-100 {
+            color: #e2e8f0;
+        }
+        
+        .bg-blue-400 {
+            background-color: var(--color-blue-400);
+        }
+        
+        .bg-navy-500 {
+            background-color: var(--color-navy-500);
+        }
+        
+        .bg-navy-600 {
+            background-color: var(--color-navy-600);
+        }
+        
+        .bg-navy-700 {
+            background-color: #1e3a8a;
+        }
+        
+        .border-navy-600 {
+            border-color: var(--color-navy-600);
+        }
+        
+        .border-blue-200 {
+            border-color: #e2e8f0;
+        }
+        
+        .focus\:ring-navy-500:focus {
+            --tw-ring-color: var(--color-navy-500);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+        
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">EB</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm Enrique Bercian</h1>
-                <p class="hero-subtitle">Developer & Entrepreneur</p>
-                <p class="hero-description">
-                    I build innovative solutions and turn ideas into reality through code and entrepreneurship.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+<body class="bg-blue-50 font-body text-blue-400">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md border-b border-transparent bg-white/95">
+        <nav class="py-4">
+            <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+                <div class="font-display text-2xl font-black text-blue-400 tracking-tight">
+                    <span class="transition-transform hover:scale-105">Brandley</span>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-placeholder">
-                    <i class="fas fa-user"></i>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate developer and entrepreneur with a love for creating innovative solutions. 
-                        My journey in technology has been driven by curiosity and a desire to solve real-world problems.
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li>
+                        <a href="#features" class="text-blue-400 font-medium hover:text-navy-600 transition-colors relative group">
+                            Features
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-navy-600 transition-all duration-200 group-hover:w-full"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#how-it-works" class="text-blue-400 font-medium hover:text-navy-600 transition-colors relative group">
+                            How it Works
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-navy-600 transition-all duration-200 group-hover:w-full"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#waitlist" class="text-blue-400 font-medium hover:text-navy-600 transition-colors relative group">
+                            Join Waitlist
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-navy-600 transition-all duration-200 group-hover:w-full"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <a href="#waitlist" class="bg-blue-400 text-blue-50 px-4 py-2 rounded-xl font-medium text-sm hover:bg-blue-300 transition-colors hover:scale-105">
+                    Get Early Access
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+        <!-- Floating particles -->
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 35%; left: 30%; animation-delay: 0.5s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 50%; left: 50%; animation-delay: 1s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 65%; left: 70%; animation-delay: 1.5s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 80%; left: 90%; animation-delay: 2s;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-8 fade-in">
+                <div class="space-y-4">
+                    <h1 class="text-5xl md:text-7xl font-display font-bold text-blue-400 leading-tight">
+                        Authentic
+                        <br />
+                        <span class="text-navy-500">Connections</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-300 max-w-3xl mx-auto leading-relaxed">
+                        Connect with verified creators who align with your brand values
                     </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new technologies, working on startup ideas, 
-                        or sharing knowledge with the developer community.
+                </div>
+
+                <div class="flex justify-center">
+                    <button onclick="scrollToWaitlist()" class="bg-navy-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:bg-navy-600 hover:scale-105 inline-flex items-center space-x-2">
+                        <span>Join the Waitlist</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-16 slide-up">
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-blue-400">
+                        Why Choose Brandley
+                    </h2>
+                    <p class="text-xl text-blue-300 max-w-3xl mx-auto">
+                        Discover the features that make Brandley the premier platform for authentic brand-creator partnerships
                     </p>
-                    <div class="skills">
-                        <h3>Skills & Technologies</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <i class="fas fa-code"></i>
-                                <span>Web Development</span>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Verified Creators</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Connect with verified creators who align with your brand values
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Analytics Dashboard</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Make informed decisions with comprehensive analytics and performance metrics
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Streamlined Workflow</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Streamlined workflow tools for efficient campaign management
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 bg-gradient-to-br from-blue-100 to-blue-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-blue-400">
+                    How It Works
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="slide-up">
+                    <h3 class="font-display text-2xl font-bold text-center mb-8 text-blue-400">
+                        For Brands
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                1
                             </div>
-                            <div class="skill-item">
-                                <i class="fas fa-mobile-alt"></i>
-                                <span>Mobile Apps</span>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Discover</h4>
+                                <p class="text-blue-300 leading-relaxed">Browse our curated network of authentic creators</p>
                             </div>
-                            <div class="skill-item">
-                                <i class="fas fa-database"></i>
-                                <span>Backend Systems</span>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                2
                             </div>
-                            <div class="skill-item">
-                                <i class="fas fa-rocket"></i>
-                                <span>Startup Development</span>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Connect</h4>
+                                <p class="text-blue-300 leading-relaxed">Reach out and negotiate partnership terms</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                3
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Collaborate</h4>
+                                <p class="text-blue-300 leading-relaxed">Execute campaigns with built-in collaboration tools</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                4
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Measure</h4>
+                                <p class="text-blue-300 leading-relaxed">Track performance and measure ROI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-up">
+                    <h3 class="font-display text-2xl font-bold text-center mb-8 text-blue-400">
+                        For Creators
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                1
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Create Profile</h4>
+                                <p class="text-blue-300 leading-relaxed">Create your profile and showcase your unique voice</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                2
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Get Discovered</h4>
+                                <p class="text-blue-300 leading-relaxed">Get discovered by brands that align with your content</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                3
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Work Together</h4>
+                                <p class="text-blue-300 leading-relaxed">Work on campaigns that resonate with your audience</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-blue-200/20 cursor-pointer card-hover">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-400 text-blue-50 rounded-full flex items-center justify-center font-semibold">
+                                4
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-lg mb-2 text-blue-400">Earn Income</h4>
+                                <p class="text-blue-300 leading-relaxed">Earn income doing what you love</p>
                             </div>
                         </div>
                     </div>
@@ -88,114 +345,180 @@
         </div>
     </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project One</h3>
-                        <p>A web application built with modern technologies to solve real-world problems.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-20 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-8 bg-white p-12 rounded-3xl border border-blue-200 shadow-sm slide-up">
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-blue-400">
+                        Join the Waitlist
+                    </h2>
+                    <p class="text-xl text-blue-300 max-w-2xl mx-auto">
+                        Be among the first to experience Brandley when we launch. Get early access and exclusive benefits.
+                    </p>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Two</h3>
-                        <p>A mobile application designed to enhance user experience and productivity.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Redux</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
+                <form id="waitlistForm" class="max-w-md mx-auto space-y-4">
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="Enter your email address"
+                        class="w-full px-6 py-4 text-lg border border-blue-200 rounded-full focus:outline-none focus:ring-2 focus:ring-navy-500 focus:border-transparent transition-all"
+                        required
+                    />
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Three</h3>
-                        <p>An analytics dashboard providing insights and data visualization capabilities.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">D3.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <div id="errorMessage" class="text-red-500 text-sm hidden"></div>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <span>enrique@example.com</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button
+                        type="submit"
+                        id="submitButton"
+                        class="w-full bg-navy-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:bg-navy-600 hover:scale-105"
+                    >
+                        Join Waitlist
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Enrique Bercian. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-blue-400 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2 space-y-4">
+                    <h3 class="text-2xl font-display font-bold">Brandley</h3>
+                    <p class="text-blue-100 max-w-md">
+                        The premier platform where brands discover authentic creators and influencers monetize their passion.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Platform</h4>
+                    <ul class="space-y-2 text-blue-100">
+                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a></li>
+                        <li><a href="#waitlist" class="hover:text-white transition-colors">Join Waitlist</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-navy-600 rounded-full flex items-center justify-center text-xl hover:bg-navy-700 transition-colors hover:scale-110">𝕏</a>
+                        <a href="#" class="w-10 h-10 bg-navy-600 rounded-full flex items-center justify-center text-xl hover:bg-navy-700 transition-colors hover:scale-110">📧</a>
+                        <a href="#" class="w-10 h-10 bg-navy-600 rounded-full flex items-center justify-center text-xl hover:bg-navy-700 transition-colors hover:scale-110">💼</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-navy-600 mt-12 pt-8 text-center">
+                <p class="text-blue-100">
+                    © 2024 Brandley. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-12 rounded-3xl border border-blue-200 shadow-sm max-w-md mx-4 text-center">
+            <div class="w-20 h-20 bg-navy-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h2 class="text-3xl font-display font-bold text-blue-400 mb-4">
+                Welcome to Brandley!
+            </h2>
+            <p class="text-xl text-blue-300">
+                Thank you for your interest in Brandley. We'll notify you as soon as we launch.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        function scrollToWaitlist() {
+            document.getElementById('waitlist').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Waitlist form handling
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('emailInput').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const submitButton = document.getElementById('submitButton');
+            
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                errorMessage.textContent = 'Please enter a valid email address';
+                errorMessage.classList.remove('hidden');
+                return;
+            }
+            
+            // Show loading state
+            submitButton.innerHTML = `
+                <span class="flex items-center justify-center space-x-2">
+                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Joining...</span>
+                </span>
+            `;
+            submitButton.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Store in localStorage
+                const existingSignups = JSON.parse(localStorage.getItem('brandley_waitlist') || '[]');
+                existingSignups.push({
+                    email: email.trim(),
+                    timestamp: new Date().toISOString(),
+                    source: 'landing_page'
+                });
+                localStorage.setItem('brandley_waitlist', JSON.stringify(existingSignups));
+                
+                // Show success modal
+                document.getElementById('successModal').classList.remove('hidden');
+                
+                // Reset form
+                document.getElementById('emailInput').value = '';
+                submitButton.innerHTML = 'Join Waitlist';
+                submitButton.disabled = false;
+                errorMessage.classList.add('hidden');
+            }, 1500);
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerHeight = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
